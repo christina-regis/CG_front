@@ -9,10 +9,12 @@
 
     $scope.notes =[
     {
+      id: '1',
       title: 'first note',
       description: 'This is my first note'
     },
     {
+      id: '2',
       title: 'second note',
       description: 'This is my second note'
     }

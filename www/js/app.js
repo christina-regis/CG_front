@@ -30,7 +30,7 @@ app.config(function($stateProvider, $urlRouterProvider){
       templateUrl: 'templates/guideIndex.html'
     })
     .state('guideUpdate', {
-      url:'/guide/update',
+      url:'/guide/update/:guideId',
       templateUrl: 'templates/guideUpdate.html'
     });
     $urlRouterProvider.otherwise('/guide/index');
