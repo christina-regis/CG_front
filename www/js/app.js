@@ -34,4 +34,5 @@ app.config(function($stateProvider, $urlRouterProvider){
       templateUrl: 'templates/guideUpdate.html'
     });
     $urlRouterProvider.otherwise('/guide/index');
+
 });

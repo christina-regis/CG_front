@@ -1,5 +1,19 @@
-<ion-view view-title="Guide Update">
+<ion-view view-title="Guide show route is update">
   <ion-content ng-controller="GuideUpdateController">
     <h4>This is an Update view for Guide ID {{guideId}}.</h4>
+    <div class="list card">
+      <p>Name:{{guide.data.firstName}} {{guide.data.lastName}}</p>
+      <p>Email: {{guide.data.email}}</p>
+      <p>Description: {{guide.data.description}}</p>
+      <p>Phone Number: {{guide.data.phoneNumber}}</p>
+      <p>Country: {{guide.data.country}}</p>
+      <p>City: {{guide.data.city}}</p>
+      <p>Zip Code: {{guide.data.zipCode}}</p>
+      <p>Information: {{guide.data.info}}</p>
+      <p>Minimum amount of time: {{guide.data.minTime}}</p>
+      <p>Maximum amount of time: {{guide.data.maxTime}}</p>
+      <p>Cost per hour: {{guide.data.price}}</p>
+      <p>Tours: {{guide.data.tours}}</p>
+    </div>
   </ion-content>
 </ion-view>

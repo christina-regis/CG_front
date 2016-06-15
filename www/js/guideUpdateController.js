@@ -1,21 +1,28 @@
 //noteId as specified in app.js
 app.controller('GuideUpdateController', function($scope, $state, $http) {
   $scope.allGuides = [];
+  $scope.newGuide = {};
   $scope.show = show;
+  $scope.update = update;
   $scope.guideId = $state.params.guideId;
-  // $http.get('http://localhost:3000/guides')
-  //   .then(function(response){
-  //     console.log("indexGuide", response);
-  //     $scope.allGuides = response.data;
-  //     });
+
   function show(guideId){
     $http.get('http://localhost:3000/guides/' + guideId)
       .then(function(response){
         console.log(response);
-        self.guide = response;
+        $scope.guide = response;
       });
-  };
+  }
   show($state.params.guideId);
+
+  function update(guideId){
+    $http.patch('http://localhost:3000/guides/' + guideId, $scope.guide.data)
+      .then(function(response){
+        console.log(response);
+        //redirect
+      });
+      $scope.newGuide = {};
+  }
 
   // $scope.notes =[
   //   {
