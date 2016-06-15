@@ -1,5 +1,5 @@
 //noteId as specified in app.js
-app.controller('GuideUpdateController', function($scope, $state, $http) {
+app.controller('GuideShowController', function($scope, $state, $http) {
   $scope.allGuides = [];
   $scope.newGuide = {};
   $scope.show = show;
@@ -15,6 +15,7 @@ app.controller('GuideUpdateController', function($scope, $state, $http) {
   }
   show($state.params.guideId);
 
+//not being used
   function update(guideId){
     $http.patch('http://localhost:3000/guides/' + guideId, $scope.guide.data)
       .then(function(response){

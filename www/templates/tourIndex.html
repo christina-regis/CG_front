@@ -1,0 +1,13 @@
+<ion-view view-title="Tour Index">
+  <ion-content ng-controller="TourIndexController">
+  <a href="#/auth" class="button">Login</a>
+    <div class="list">
+      <a href="#/tour/show/{{tour._id}}" class="item" ng-repeat="tour in allTours">
+        <p>Title: {{tour.title}}</p>
+        <p>City: {{tour.city}}</p>
+        <p>Description: {{tour.description}}</p>
+        <p>Guide: {{tour.guide}}</p>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

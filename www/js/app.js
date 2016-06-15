@@ -29,10 +29,23 @@ app.config(function($stateProvider, $urlRouterProvider){
       url:'/guide/index',
       templateUrl: 'templates/guideIndex.html'
     })
-    .state('guideUpdate', {
-      url:'/guide/update/:guideId',
-      templateUrl: 'templates/guideUpdate.html'
+    .state('guideShow', {
+      url:'/guide/show/:guideId',
+      templateUrl: 'templates/guideShow.html'
+    })
+    .state('tourIndex', {
+      url:'/tour/index',
+      templateUrl: 'templates/tourIndex.html'
+    })
+    .state('tourShow', {
+      url:'/tour/show/:tourId',
+      templateUrl: 'templates/tourShow.html'
+    })
+    .state('auth', {
+      url: '/auth',
+      templateUrl: 'templates/auth.html',
     });
-    $urlRouterProvider.otherwise('/guide/index');
+
+    $urlRouterProvider.otherwise('/tour/index');
 
 });

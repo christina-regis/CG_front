@@ -1,12 +1,12 @@
 <ion-view view-title="Guide Index">
   <ion-content ng-controller="GuideIndexController">
     <div class="list">
-      <a href="#/guide/update/{{guide._id}}" class="item" ng-repeat="guide in allGuides">
+      <a href="#/guide/show/{{guide._id}}" class="item" ng-repeat="guide in allGuides">
         <p>First name: {{guide.firstName}}</p>
       </a>
     </div>
     <div class="list">
-      <a href="#/guide/update/{{note.id}}" class="item" ng-repeat="note in notes">
+      <a href="#/guide/show/{{note.id}}" class="item" ng-repeat="note in notes">
         <h2>{{note.title}}</h2>
         <p>{{note.description}}</p>
       </a>
