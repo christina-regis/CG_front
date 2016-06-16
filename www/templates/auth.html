@@ -1,9 +1,9 @@
 <ion-view view-title="Login">
   <ion-content ng-controller="AuthController">
     <div>
-      <input type="text" placeholder="Email">
-      <input type="text" placeholder="Password">
-      <button class="button">Login</button> <a class="button" href="#/tour/index">Home</a>
+      <input type="text" ng-model="guideAuth.email" placeholder="Email">
+      <input type="text" ng-model="guideAuth.password" placeholder="Password">
+      <button class="button" ng-click="guideLogin()">Login</button> <a class="button" href="#/tour/index">Home</a>
     </div>
   </ion-content>
 </ion-view>
